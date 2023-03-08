@@ -3,16 +3,28 @@ import React, {useState, useEffect} from "react";
 function PokemonCard({pokemon, myPokemon, setMyPokemon}) {
 
 const [front, setFront] = useState(true)
-const [addMyPokemon, setAddMyPokemon] = useState(false)
+// const [addMyPokemon, setAddMyPokemon] = useState(false)
 
 function handleMyPokemon() {
-        
+    fetch("http://localhost:3000/pokemon", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+    "id": pokemon.id,
+    "name": pokemon.name,
+    "sprites": {
+      "front": pokemon.sprites.front_default,
+      "back": pokemon.sprites.back_default
+         }})
+    })
+    .then(res => res.json())
+    .then(data => setMyPokemon([...myPokemon, data]))   
     
-    setAddMyPokemon(!addMyPokemon)
-    console.log(addMyPokemon)
-    if(addMyPokemon === true) {
-        setMyPokemon([...myPokemon, pokemon])
-    }
+    // setAddMyPokemon(!addMyPokemon)
+    // console.log(addMyPokemon)
+    // if(addMyPokemon === true) {
+    //     setMyPokemon([...myPokemon, pokemon])
+    // }
     
 }
 

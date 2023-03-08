@@ -32,15 +32,20 @@ function PokemonContainer() {
     }, [search])
 
     function handleRemove(removedPokemon) {
-        const filterPoke = myPokemon.filter((pokemon) => pokemon.id === removedPokemon.id)
-        setMyPokemon(filterPoke)
+       // const filterPoke = myPokemon.filter((pokemon) => pokemon.id === removedPokemon.id)
+        
+     
+       // setMyPokemon(filterPoke)
     }
+
+
+
 
     return (
         <div>
             <SearchBar setSearch={setSearch}/>
             <PokemonCard pokemon={pokemon} myPokemon={myPokemon} setMyPokemon={setMyPokemon}/>
-            <MyPokemon pokemon={myPokemon} handleRemove={handleRemove}/>
+            <MyPokemon pokemon={myPokemon} handleRemove={handleRemove} setMyPokemon={setMyPokemon}/>
             <MyPokemonForm pokemon={myPokemon}/>
         </div>
     )
