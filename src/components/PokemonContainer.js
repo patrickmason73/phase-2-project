@@ -31,12 +31,12 @@ function PokemonContainer() {
           )
     }, [search])
 
-    function handleRemove(removedPokemon) {
-       // const filterPoke = myPokemon.filter((pokemon) => pokemon.id === removedPokemon.id)
+    // function handleRemove(removedPokemon) {
+    //    // const filterPoke = myPokemon.filter((pokemon) => pokemon.id === removedPokemon.id)
         
      
-       // setMyPokemon(filterPoke)
-    }
+    //    // setMyPokemon(filterPoke)
+    // }
 
 
 

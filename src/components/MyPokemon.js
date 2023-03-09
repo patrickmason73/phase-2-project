@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 
-function MyPokemon({pokemon, handleRemove, setMyPokemon}) {
+function MyPokemon({pokemon, setMyPokemon}) {
 
 
 
@@ -11,11 +11,11 @@ useEffect(() => {
 }, [pokemon])    
 
 
-function handleClick(e) {
-    console.log(e)
-    handleRemove(e.target)
+// function handleClick(e) {
+//     console.log(e)
+//     handleRemove(e.target)
    
-}
+// }
 
 
 const displayPoke = pokemon.map((item) => {
