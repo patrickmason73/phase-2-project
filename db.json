@@ -1,22 +1,6 @@
 {
   "pokemon": [
     {
-      "id": 132,
-      "name": "ditto",
-      "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png"
-      }
-    },
-    {
-      "id": 4,
-      "name": "charmander",
-      "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
-      }
-    },
-    {
       "id": 38,
       "name": "ninetales",
       "sprites": {

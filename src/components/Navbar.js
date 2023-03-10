@@ -6,7 +6,7 @@ const linkStyles = {
     width: "100px",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "blue",
+    background: "red",
     textDecoration: "none",
     color: "white",
   };
@@ -19,7 +19,7 @@ function Navbar() {
         exact
         style={linkStyles}
         activeStyle={{
-            background: "darkblue",
+            background: "darkred",
           }}
         >
         Home
@@ -29,7 +29,7 @@ function Navbar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "darkred",
         }}
       >
         Search
@@ -39,7 +39,7 @@ function Navbar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "darkred",
         }}
       >
         My Pokemon
