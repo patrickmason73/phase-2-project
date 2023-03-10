@@ -1,16 +1,6 @@
 import React, {useEffect} from "react";
 
-const cardStyle = {
-    position: "absolute",
-    top: "200px",
-    left: "40px",
-    fontSize: "150%"
-}
 
-const imgStyle = {
-    height: "150%",
-    width: "150%"
-}
 
 function MyPokemon({pokemon, setMyPokemon}) {
 
@@ -31,6 +21,14 @@ useEffect(() => {
 
 
 const displayPoke = pokemon.map((item) => {
+    const cardStyle = {
+        fontSize: "150%"
+    }
+    
+    const imgStyle = {
+        height: "30%",
+        width: "30%"
+    }
     return (
         <div key={item.id} style={cardStyle}>
             <h2 style={{textTransform: 'capitalize'}}>{item.name}</h2>
