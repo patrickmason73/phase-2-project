@@ -1,13 +1,52 @@
-import React from "react";
-import PokemonContainer from "./PokemonContainer";
+import React, {useEffect, useState} from "react";
+import {Route, Switch} from "react-router-dom";
+import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
+import MyPokemon from "./MyPokemon";
+import PokemonCard from "./PokemonCard";
+
 
 function App() {
 
+  const [search, setSearch] = useState("charizard")
+  const [myPokemon, setMyPokemon] = useState([])
+  const [pokemon, setPokemon] = useState({
+      "name" : "charizard",
+      "id" : 6,
+      "sprites": {
+          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
+          "back_female": null,
+          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png",
+          "back_shiny_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+          "front_female": null,
+          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png",
+          "front_shiny_female": null,
+  }})
+ 
+
+  useEffect(() => {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
+      .then(res => res.json())
+      .then(data => {
+          console.log(data)
+          setPokemon(data)}
+        )
+  }, [search])
  
 
   return (
     <div className="App">
-<PokemonContainer />
+<Navbar/>
+<Switch>
+  <Route exact path="/search">
+ <SearchBar setSearch={setSearch}/>
+ <PokemonCard pokemon={pokemon} myPokemon={myPokemon} setMyPokemon={setMyPokemon}/>
+ </Route>
+ <Route exact path="/mypokemon">
+<MyPokemon pokemon={myPokemon} setMyPokemon={setMyPokemon}/>
+ </Route>
+</Switch>
     </div>
   );
 }
