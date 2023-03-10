@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
 
 return (
-    <div>
+    <div style={{fontSize: "130%"}}>
     <p>Welcome to Pat's Pokemon 2.0</p>
 
     <p>Search for a Pokemon under the Search tab</p>
