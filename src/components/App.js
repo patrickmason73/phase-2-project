@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import MyPokemon from "./MyPokemon";
 import PokemonCard from "./PokemonCard";
+import Home from "./Home";
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
  
 
   return (
-    <div className="App">
+    <div>
 <Navbar/>
 <Switch>
   <Route exact path="/search">
@@ -45,6 +46,9 @@ function App() {
  </Route>
  <Route exact path="/mypokemon">
 <MyPokemon pokemon={myPokemon} setMyPokemon={setMyPokemon}/>
+ </Route>
+ <Route exact path="/">
+<Home />
  </Route>
 </Switch>
     </div>
