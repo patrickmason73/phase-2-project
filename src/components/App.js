@@ -41,7 +41,7 @@ function App() {
 <Navbar/>
 <Switch>
   <Route exact path="/search">
- <SearchBar setSearch={setSearch}/>
+ <SearchBar setSearch={setSearch} />
  <PokemonCard pokemon={pokemon} myPokemon={myPokemon} setMyPokemon={setMyPokemon}/>
  </Route>
  <Route exact path="/mypokemon">
