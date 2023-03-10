@@ -1,5 +1,12 @@
 import React, {useState} from "react";
 
+
+const searchStyle = {
+    position: "absolute",
+    top: "150px",
+    left: "40px"
+}
+
 function SearchBar({setSearch}) {
 
 const [text, setText] = useState("")
@@ -20,7 +27,7 @@ function updateText(e) {
 }
 
 return (
-<div>
+<div style={searchStyle}>
     Search for a Pokemon!
     <form onSubmit={handleSubmit}>
     <input onChange={updateText}></input>

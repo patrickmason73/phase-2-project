@@ -1,5 +1,16 @@
 import React, {useState} from "react";
 
+const cardStyle = {
+    position: "absolute",
+    top: "200px",
+    left: "40px"
+}
+
+const imgStyle = {
+    height: "135%",
+    width: "135%"
+}
+
 function PokemonCard({pokemon, myPokemon, setMyPokemon}) {
 
 const [front, setFront] = useState(true)
@@ -37,12 +48,13 @@ function handleSprite() {
 const frontSprite = pokemon.sprites
 const backSprite = pokemon.sprites
 
+
 return (
-    <>
-    <h1>{pokemon.name}</h1>
-<img src={front ? frontSprite.front_default : backSprite.back_default} alt="sprite" onClick={handleSprite}></img>
+    <div style={cardStyle}>
+    <h1 style={{textTransform: 'capitalize'}}>{pokemon.name}</h1>
+<img src={front ? frontSprite.front_default : backSprite.back_default} alt="sprite" onClick={handleSprite} style={imgStyle}></img>
     <button onClick={handleMyPokemon}>ADD TO MY POKEMON</button>
-    </>
+    </div>
 )
 
 
