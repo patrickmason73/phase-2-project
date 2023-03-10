@@ -1,5 +1,17 @@
 import React, {useEffect} from "react";
 
+const cardStyle = {
+    position: "absolute",
+    top: "200px",
+    left: "40px",
+    fontSize: "150%"
+}
+
+const imgStyle = {
+    height: "150%",
+    width: "150%"
+}
+
 function MyPokemon({pokemon, setMyPokemon}) {
 
 
@@ -20,9 +32,9 @@ useEffect(() => {
 
 const displayPoke = pokemon.map((item) => {
     return (
-        <div key={item.id}>
-            <h2>{item.name}</h2>
-            <img src={item.sprites.front} alt={item.name}></img>
+        <div key={item.id} style={cardStyle}>
+            <h2 style={{textTransform: 'capitalize'}}>{item.name}</h2>
+            <img src={item.sprites.front} alt={item.name} style={imgStyle}></img>
             <button onClick={() => {   fetch(`http://localhost:3000/pokemon/${item.id}`, {method: 'DELETE'})}}>REMOVE</button>
         </div>
     )
