@@ -7,6 +7,9 @@ import PokemonCard from "./PokemonCard";
 import Home from "./Home";
 
 
+
+
+
 function App() {
 
   const [search, setSearch] = useState("charizard")
@@ -33,7 +36,7 @@ function App() {
 
   return (
     <div>
-<Navbar/>
+<Navbar />
 <Switch>
   <Route exact path="/search">
  <SearchBar setSearch={setSearch} />

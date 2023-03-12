@@ -11,10 +11,17 @@ const linkStyles = {
     color: "white",
   };
 
+  const navStyle = {
+    height: "200px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }
+
 function Navbar() {
 
     return (
-        <div>
+        <div style={navStyle}>
         <NavLink to="/"
         exact
         style={linkStyles}

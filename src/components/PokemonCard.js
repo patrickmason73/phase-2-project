@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 
 const cardStyle = {
-    position: "absolute",
-    top: "200px",
-    left: "40px"
+    display: "flex",
+        alignItems: "center",
+        justifyContent: "center",  
 }
 
 const imgStyle = {
-    height: "135%",
-    width: "135%"
+    height: "20%",
+    width: "20%"
 }
 
 function PokemonCard({pokemon, myPokemon, setMyPokemon}) {

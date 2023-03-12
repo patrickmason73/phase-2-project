@@ -1,5 +1,11 @@
 import React, {useEffect} from "react";
 
+const headStyle = {
+    display: "flex",
+        alignItems: "center",
+        justifyContent: "center",  
+}
+
 
 
 function MyPokemon({pokemon, setMyPokemon}) {
@@ -22,7 +28,10 @@ useEffect(() => {
 
 const displayPoke = pokemon.map((item) => {
     const cardStyle = {
-        fontSize: "150%"
+        fontSize: "150%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",  
     }
     
     const imgStyle = {
@@ -40,7 +49,7 @@ const displayPoke = pokemon.map((item) => {
 
     return (
         <div className="MyPokemon">
-            <h1>MY POKEMON</h1>
+            <h1 style={headStyle}>MY POKEMON</h1>
             {displayPoke}
         </div>
     )

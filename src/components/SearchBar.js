@@ -2,9 +2,9 @@ import React, {useState} from "react";
 
 
 const searchStyle = {
-    position: "absolute",
-    top: "150px",
-    left: "40px"
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",  
 }
 
 function SearchBar({setSearch}) {
