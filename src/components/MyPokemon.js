@@ -16,7 +16,7 @@ useEffect(() => {
     fetch("http://localhost:3000/pokemon")
     .then(res => res.json())
     .then(data => setMyPokemon(data))
-}, [pokemon])    
+}, [pokemon]);    
 
 
 // function handleClick(e) {
