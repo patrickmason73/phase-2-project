@@ -14,7 +14,7 @@ const imgStyle = {
 function PokemonCard({pokemon, myPokemon, setMyPokemon}) {
 
 const [front, setFront] = useState(true)
-// const [addMyPokemon, setAddMyPokemon] = useState(false)
+
 
 function handleMyPokemon() {
     fetch("http://localhost:3000/pokemon", {
@@ -30,16 +30,9 @@ function handleMyPokemon() {
     })
     .then(res => res.json())
     .then(data => setMyPokemon([...myPokemon, data]))   
-    
-    // setAddMyPokemon(!addMyPokemon)
-    // console.log(addMyPokemon)
-    // if(addMyPokemon === true) {
-    //     setMyPokemon([...myPokemon, pokemon])
-    // }
-    
+        
 }
 
-// console.log(pokemon.sprites)
 
 function handleSprite() {
     setFront(!front)
