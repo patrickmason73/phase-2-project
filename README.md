@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Pat's Pokemon 2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pat's Pokemon 2.0 is a React app that allows users to search for any pokemon and add them to a local db.json server. This app is serving as an upgrade upon my phase 1 javaScript project but with more advanced features as well as similar functionality coded with JSX.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+Under the Search tab, the user can search for any existing pokemon and as long as the name is spelled correctly, the pokemon's sprite image will be displayed as well as their name. Next to the sprite is a button that says "ADD TO MY POKEMON," clicking this will add the pokemon to the user's collection of pokemon which resides within the My Pokemon tab. Under this tab the user will see their pokemon that they have added and also have the option to remove them which does so by making a fetch 'DELETE' request to the local server.
 
-### `npm start`
+Below is a gif showing the functionalities
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Alt Text](https://raw.githubusercontent.com/patrickmason73/phase-2-project/main/pats%20pokemon.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clicking the sprite also allows the user to see the backside of the pokemon.
 
-### `npm test`
+## Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Search bar is set up as a form in which the search bar's text has it's own state, updating this state by typing in the box then submitting it causes a fetch 'GET' request to the pokemon API to occur. The promises returned give us the pokemon data we searched for in an array.
 
-### `npm run build`
+![Alt Text](https://raw.githubusercontent.com/patrickmason73/phase-2-project/main/phase%202%20proj%20cap.PNG)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Alt Text](https://raw.githubusercontent.com/patrickmason73/phase-2-project/main/phase%202%20proj%20cap%202.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here is the code for displaying the pokemon as well as the fetch 'POST' request to the local server upon clicking the "ADD TO MY POKEMON" button:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Alt Text](https://raw.githubusercontent.com/patrickmason73/phase-2-project/main/phase%202%20proj%20cap%203.PNG)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[pokemonAPI](https://pokeapi.co/)
