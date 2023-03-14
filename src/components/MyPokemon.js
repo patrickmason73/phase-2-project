@@ -20,13 +20,6 @@ useEffect(() => {
 }, [pokemon]);    
 
 
-// function handleClick(e) {
-//     console.log(e)
-//     handleRemove(e.target)
-   
-// }
-
-
 const displayPoke = pokemon.map((item) => {
     const cardStyle = {
         fontSize: "150%",
