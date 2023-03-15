@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 
-
 const searchStyle = {
         display: "flex",
         alignItems: "center",
@@ -12,8 +11,6 @@ function SearchBar({setSearch}) {
 const [text, setText] = useState("")
 
 function onSearch() {
-   
-    
     setSearch(text)
 }
 
