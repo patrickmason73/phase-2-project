@@ -16,7 +16,7 @@ function onSearch() {
 
 function handleSubmit(e) {
     e.preventDefault()
-    setSearch(text)
+    setSearch(text.toLowerCase())
 }
 
 function updateText(e) {
