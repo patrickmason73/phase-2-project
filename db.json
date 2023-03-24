@@ -1,11 +1,12 @@
 {
   "pokemon": [
     {
-      "id": 38,
-      "name": "ninetales",
+      "id": 132,
+      "name": "ditto",
+      "level": 3,
       "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/38.png"
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png"
       }
     }
   ]
