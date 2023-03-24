@@ -6,6 +6,11 @@ const searchStyle = {
         justifyContent: "center",  
 }
 
+const levelStyle ={
+    padding:"1em"
+}
+
+
 function SearchBar({setSearch, setLevel}) {
 
 const [text, setText] = useState("")
@@ -27,13 +32,12 @@ function updateText(e) {
 
 return (
 <div style={searchStyle}>
-    Search for a Pokemon!
+   <strong>Search for a Pokemon!</strong>
     <form onSubmit={handleSubmit}>
-    <input onChange={updateText}></input>
-       Give it a level!
-    <input onChange={updateLevel}></input>
+    <input onChange={updateText} value={text}></input>
+     <strong style={levelStyle}>Give it a level!</strong>
+    <input onChange={updateLevel} value={levelText}></input>
     <button type="submit">Submit</button>
-    
     </form>
 </div>
 )

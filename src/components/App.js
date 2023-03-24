@@ -12,6 +12,7 @@ import Home from "./Home";
 
 function App() {
 
+  const [nickname, setNickname] = useState("You didn't name me :(")
   const [level, setLevel] = useState(1)
   const [search, setSearch] = useState("charizard")
   const [myPokemon, setMyPokemon] = useState([])
@@ -19,6 +20,7 @@ function App() {
       "name" : "charizard",
       "id" : 6,
       "level" : 1,
+      "nickname" : "bingus",
       "sprites": {
           "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
           "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",          
@@ -30,9 +32,9 @@ function App() {
       .then(res => res.json())
       .then(data => {
           console.log(data)
-          setPokemon({...data, level})}
+          setPokemon({...data, level, nickname})}
         )
-  }, [search])
+  }, [search, level, nickname])
 
   useEffect(() => {
     fetch("http://localhost:3000/pokemon")
@@ -48,6 +50,7 @@ function handleMyPokemon(pokemon) {
     "id": pokemon.id,
     "name": pokemon.name,
     "level": pokemon.level,
+    "nickname": pokemon.nickname,
     "sprites": {
       "front": pokemon.sprites.front_default,
       "back": pokemon.sprites.back_default
@@ -66,7 +69,7 @@ function handleMyPokemon(pokemon) {
 <Switch>
   <Route exact path="/search">
  <SearchBar setSearch={setSearch} setLevel={setLevel}/>
- <PokemonCard pokemon={pokemon} myPokemon={myPokemon} setMyPokemon={setMyPokemon} handleMyPokemon={handleMyPokemon}/>
+ <PokemonCard pokemon={pokemon} myPokemon={myPokemon} setMyPokemon={setMyPokemon} handleMyPokemon={handleMyPokemon} setNickname={setNickname}/>
  </Route>
  <Route exact path="/mypokemon">
 <MyPokemon pokemon={myPokemon} />
